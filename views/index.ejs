@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <nav class="nav-container">
+        <ul class="menu-lista">
+            <li><a href="inicio.html">Início</a></li>
+            <li><a href="noticia.html">Notícias</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        <h1>Bem-vindo a ImpactoNews!</h1>
+
+<form action="/" method="GET" class="barra-pesquisa">
+<input type="text" name="q" placeholder="Buscar notícias..." required />
+<button type="submit">Pesquisar</button>
+</form>
+<br>
+
+<section class="hero">
+        
+        <div class="hero-image" style="background-image:url('imagens/o\ reencontro.webp');">
+             </div>
+        
+        <div class="conteudo-hero">
+            <div class="hero-texto">
+            <h2>O comovente reencontro de casal separado por 40 anos após uma gravidez na adolescência
+</h2>
+            
+            <p>O ano era 1967. Os dois estavam no ensino médio e eram membros do grupo de teatro das suas respectivas escolas.</p>
+            
+            <a href="noticia.html" class="hero-cta">Leia a Notícia Completa</a>
+        </div>
+        
+    </section>
+    
+
+    <div class="layout-container">
+        
+        <aside class="sidebar">
+            
+            <div class="widget">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="#">Política</a></li>
+                    <li><a href="#">Economia</a></li>
+                    <li><a href="#">Internacional</a></li>
+                    <li><a href="#">Esportes</a></li>
+                    <li><a href="#">Cultura</a></li>
+                </ul>
+            </div>
+
+            <br>
+
+            <div class="widget">
+                <h3>Mais Lidas</h3>
+                <ol>
+                    <li><a href="#">COP 30: Reunião para Implementação de NAP's</a></li>
+                    <li><a href="#">U$ 2,25 bilhões na terceira emissão de títulos soberanos</a></li>
+                    <li><a href="#">Porque é comemorado a conciência negra?</a></li>
+                    <li><a href="#">Dose úncica da vacina da dengue</a></li>
+                </ol>
+            </div>
+
+        </aside>
+        
+<% noticias.forEach(function(item) { %>
+
+    <div class="caixa-item">
+        
+        <img 
+            src="<%= item.urlToImage || 'imagens/cop30-reuniao.jpeg' %>" 
+            alt="Imagem da notícia" 
+            class="noticia"
+        >
+
+        <p class="legenda">
+            <a href="<%= item.url %>" target="_blank" rel="noopener noreferrer">
+                <%= item.title %>
+            </a>
+        </p>
+        
+    </div>
+
+<% }); %>
+    <div class="caixas">
+
+            <div class="caixa-item">
+                <img src="imagens/cop30-reuniao.jpeg" alt="Reunião da Cop 30"class="noticia" >
+                <p class="legenda">
+                    <a href="https://cop30.br/pt-br/noticias-da-cop30/cop30-inaugura-alianca-pela-implementacao-de-planos-nacionais-de-adaptacao" target="_blank" rel="noopener noreferrer">A Aliança para a Implementação de NAPs foi lançada na COP30 para acelerar a execução dos Planos Nacionais de Adaptação, mobilizando financiamento e unindo governos, organismos internacionais e setor privado.</a>
+            </div>
+
+             <div class="caixa-item">
+                <img src="imagens/cidade-tornado.jpg" alt="Cidade onde houve o tornado no Sul." class="noticia" >
+                <p class="legenda">
+                    <a href="https://g1.globo.com/pr/campos-gerais-sul/noticia/2025/11/15/veja-como-esta-rio-bonito-do-iguacu-uma-semana-apos-tornado.ghtml" target="_blank" rel="noopener noreferrer">Um tornado com ventos de até 330 km/h destruiu 90% de Rio Bonito do Iguaçu (PR), deixando sete mortos, centenas de feridos e milhares de desabrigados. Após a devastação, uma força-tarefa entre governo, voluntários e presos trabalha na reconstrução da cidade.</a>
+            </a>
+                </p>
+            </div>
+            
+            <div class="caixa-item">
+                <img src="imagens/divida-externa.webp" alt="noticia" class="noticia" >
+                <p class="legenda">
+                    <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2025-11/brasil-capta-us-225-bilhoes-em-titulos-no-mercado-internacional" target="_blank" rel="noopener noreferrer">O Brasil captou US$ 2,25 bilhões em sua terceira emissão de títulos soberanos sustentáveis, incluindo o novo Global 2033 para financiar projetos ambientais e sociais. </a>
+                </p>
+            </div>
+
+
+
+            <div class="caixa-item">
+                <img src="imagens/consciencia-negra.jpeg" alt="noticia" class="noticia" >
+                <p class="legenda">
+                    <a href="https://www.cut.org.br/noticias/pela-segundo-ano-dia-da-consciencia-negra-e-feriado-em-todo-o-pais-saiba-por-que-eb3f" target="_blank" rel="noopener noreferrer"> O Dia Nacional da Consciência Negra, celebrado em 20 de novembro, homenageia Zumbi dos Palmares e destaca a resistência do povo negro contra o racismo e as desigualdades históricas no Brasil.</a>
+                </p>
+            </div>
+
+
+            <div class="caixa-item">
+                <img src="imagens/dose-unica.jpeg" alt="noticia" class="noticia" >
+                <p class="legenda">
+                    <a href="https://g1.globo.com/saude/noticia/2025/11/26/brasil-ganha-1a-vacina-de-dose-unica-contra-a-dengue-anvisa-aprova-imunizante-do-butantan.ghtml" target="_blank" rel="noopener noreferrer"> A Anvisa concluiu a avaliação técnica e está prestes a registrar a Butantan-DV, primeira vacina de dose única contra a dengue, que já comprovou alta eficácia e segurança. O Instituto Butantan possui mais de 1 milhão de doses prontas.</a>
+                </p>
+            </div>
+
+            <div class="caixa-item">
+                <img src="imagens/casal-reecontro.webp" alt="noticia" class="noticia" >
+                <p class="legenda">
+                    <a href="https://www.bbc.com/portuguese/articles/cx2g7w6v9pyo" target="_blank" rel="noopener noreferrer">Kevin e Debbie se apaixonaram na adolescência nos anos 1960, mas a gravidez inesperada e pressões sociais da época os separaram por mais de 40 anos. Após vidas distintas e muitos obstáculos, eles finalmente se reencontraram e vivem hoje o amor que não puderam viver na juventude.</a>
+                </p>
+            </div>
+            <div class="caixa-item video-destaque">
+                <div class="video-container">
+               <iframe  
+               src="https://www.youtube.com/embed/RrbalclP6f4?autoplay=1&mute=1"
+               title="Washington Rodrigues, o Apolinho, morre aos 87 anos"
+               frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+                </div>
+                <p class="legenda">
+                    <a href="https://www.youtube.com/watch?v=RrbalclP6f4&list=PL5NRCopnVJUYySaHyB0V2d1fwjBElhj_t&index=11" target="_blank" rel="noopener noreferrer">O vídeo anuncia a morte do jornalista Washington Rodrigues, aos 87 anos, e destaca sua importância no jornalismo esportivo brasileiro. A reportagem relembra momentos marcantes da carreira e sua forte identificação com o público. </a>
+</p>
+    </div>
+    </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 ImpactoNews. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
